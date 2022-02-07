@@ -1,11 +1,9 @@
-vim9script
+" Library of functions for the c file type.
+"
+" 2021 Dec 16 - Written by Kenny Lam.
 
-# Library of functions for the c file type.
-#
-# 2021 Dec 16 - Written by Kenny Lam.
-
-# Comment out lines selected in Visual mode if the first of such lines is not
-# commented. Otherwise, uncomment them.
+" Comment out lines selected in Visual mode if the first of such lines is not
+" commented. Otherwise, uncomment them.
 function klen#ft#c#v_toggle_comment() range
 	" klen#ft#c#v_toggle_comment() implementation {{{
 	let l:save_search = getreg('/')
@@ -50,4 +48,4 @@ function klen#ft#c#v_toggle_comment() range
 	nohlsearch
 	call setreg('/', l:save_search)
 endfunction
-# }}}
+" }}}
